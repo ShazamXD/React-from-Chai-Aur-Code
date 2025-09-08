@@ -31,7 +31,6 @@ function App() {
           >Yellow</button>
         </div>
       </div>
-
     </div>
   )
 }
