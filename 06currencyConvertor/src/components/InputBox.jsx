@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useId} from 'react'
 
 function InputBox({
     label,
@@ -12,17 +12,21 @@ function InputBox({
     
     className = "",
 }) {
+    const amountInputId = useId() /* React hook that creates a unique ID string each time the component is rendered
+    This is especially useful when you have multiple copies of the same component (so IDs don’t clash)
+    */
    
 
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className} `}>
             {/* Always using "bg-white p-3 rounded-lg text-sm flex" plus whatever extra CSS you pass in className */}
             <div className="w-1/2">
-                <label  className="text-black/40 mb-2 inline-block">
+                <label htmlFor={amountInputId}  
+                className="text-black/40 mb-2 inline-block">
                     {label}
                 </label>
                 <input
-                    
+                    id={amountInputId}
                     className="outline-none w-full bg-transparent py-1.5"
                     type="number" //This input will only allow numbers
                     placeholder="Amount" //Shows light gray text “Amount” when the input is empty.
