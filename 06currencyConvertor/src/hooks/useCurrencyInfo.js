@@ -18,3 +18,11 @@ function useCurrencyInfo(currency){
 }
 
 export default useCurrencyInfo; // Makes this hook available to other files. You can import it with "import useCurrencyInfo from './useCurrencyInfo';"
+
+
+/* useEffect ? “useEffect is a React hook that lets us perform side effects in a component — like fetching data, updating the DOM, or setting up event listeners.
+It runs either after the component renders, or again when specific dependencies change.” “For example, if I put [count] in the dependency array, the function inside 
+useEffect will run only when the value of count changes.” */
+
+/* useState ? “useState is a React Hook that allows functional components to store and update state values. When the state 
+changes, React automatically re-renders the component to reflect the updated data.” */
