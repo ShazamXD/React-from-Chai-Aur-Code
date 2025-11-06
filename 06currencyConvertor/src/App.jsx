@@ -29,19 +29,26 @@ function App() {
 
    return (
         <div
-            className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+            className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat gap-6"
             style={{
                 backgroundImage: `url('https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg')`,
             }}
         >
-            <div className="w-full">
+            <div className="w-full flex justify-center items-center">
+                <div className="flex justify-center items-center">
+                    <img src="https://framerusercontent.com/images/X9EHD6pwUb17NFFMCCk8VOWDnD8.jpg" 
+                    alt=""
+                    className='h-80 w-80'
+                    />
+                </div>
                 <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
                     <form
                         onSubmit={(e) => {
-                            e.preventDefault();
+                            e.preventDefault(); // to prevent default function of form submit 
                             convert()
                         }}
                     >
+                        {/* FROM BOX */}
                         <div className="w-full mb-1">
                             <InputBox
                                 label="From"
@@ -52,6 +59,7 @@ function App() {
                                 onAmountChange={(amount)=> setAmount(amount)}
                             />
                         </div>
+                        {/* SWAP BUTTON */}
                         <div className="relative w-full h-0.5">
                             <button
                                 type="button"
@@ -61,6 +69,7 @@ function App() {
                                 swap
                             </button>
                         </div>
+                        {/* TO BOX */}
                         <div className="w-full mt-1 mb-4">
                             <InputBox
                                 label="To"
@@ -71,8 +80,9 @@ function App() {
                                 amountDisable
                             />
                         </div>
+                        {/* SUBMIT BUTTON */}
                         <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
-                            Convert {from.toUpperCase()} to {to.toUpperCase}
+                            Convert {from.toUpperCase()} to {to.toUpperCase()}
                         </button>
                     </form>
                 </div>
