@@ -1,1 +1,0 @@
-Learn React from Chai Aur React a series by Hitesh Sir 
